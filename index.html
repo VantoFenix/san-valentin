@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Berlin Sans FB Demi', sans-serif;
+            color: black;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .gif-container {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button#yesButton {
+            background-color: green;
+            color: white;
+        }
+        button#noButton {
+            background-color: red;
+            color: white;
+        }
+        .message {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.5em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín?</h1>
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif" alt="Ositos abrazándose con amor" width="300">
+    </div>
+    <div class="buttons">
+        <button id="yesButton">Sí</button>
+        <button id="noButton">No</button>
+    </div>
+    <div class="message" id="message"></div>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            document.body.innerHTML = `
+                <div class="message">Te amo mucho mi reina bella <3</div>
+                <div class="gif-container">
+                    <img src="https://media.giphy.com/media/l3vRkIJBb1Y5lQ6lC/giphy.gif" alt="Corazón" width="300">
+                </div>
+            `;
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            document.body.innerHTML = `
+                <div class="message">Okey, seguro tienes a otro</div>
+                <div class="gif-container">
+                    <img src="https://media.giphy.com/media/3oEjI5VtIhHvK37WYo/giphy.gif" alt="Dedo arriba" width="300">
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
